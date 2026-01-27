@@ -3,23 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>東京科学大クイズ研究会(TEQ) - 公式サイト</title>
+    <title>クイズ研究会 - 公式サイト</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <div class="hamburger-menu">
+        <input type="checkbox" id="menu-btn-check">
+        
+        <label for="menu-btn-check" class="menu-btn"><span></span></label>
+        
+        <div class="menu-content">
+            <ul>
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="join.html">入会案内</a></li>
+                <li><a href="schedule.html">スケジュール</a></li>
+                <li><a href="contact.html">連絡先</a></li>
+            </ul>
+        </div>
+    </div>
     <header>
-        <h1>東京科学大クイズ研究会 TEQ</h1>
+        <h1>〇〇大学 クイズ研究会</h1>
         <p>正解への情熱、知の探究。</p>
     </header>
 
     <main>
-        
         <section>
             <h2>About Us</h2>
             <p>
                 当サークルは、クイズを楽しむこと、そして知見を広めることを目的に活動しています。
-                文系・理系を問わず、あらゆるジャンルの知識を武器に、日々早押しクイズをしています。
+                文系・理系を問わず、あらゆるジャンルの知識を武器に、日々早押しボタンを叩いています。
                 現在は大学からの「公認化」を目指し、より活発な運営に取り組んでいます。
             </p>
         </section>
@@ -27,8 +40,8 @@
 
         <section>
             <div class="card">
-                <h3>普段の活動</h3>
-                <p>週に1回、Taki Plazaのワークショップルーム にて本格的な早押し機を使って練習を行っています。</p>
+                <h3>例会・練習会</h3>
+                <p>週に〇回、学内の教室にて早押し機を使った本格的な練習を行っています。</p>
             </div>
             
             <div class="card">
@@ -40,19 +53,19 @@
         <section class="quiz-box">
             <h2>今日の1問</h2>
             <p>
-                <strong>Q.</strong> 横軸にP波の走時、縦軸に初期微動継続時間をプロットした図のことを、これを提唱した日本の地震学者の名前から何というでしょう？
+                <strong>Q.</strong> 地震の震源の分布を立体的に表した図のことを、これを提唱した日本の地震学者の名前から何図というでしょう？
             </p>
             <details>
                 <summary style="cursor: pointer; color: #1d4ed8; font-weight: bold;">正解を見る</summary>
-                <p style="margin-top: 10px;">A. 和達(わだち)ダイヤグラム</p>
+                <p style="margin-top: 10px;">A. 和達（わだち）図</p>
             </details>
         </section>
 
         <section style="text-align: center; margin-bottom: 50px;">
             <h2>Join Us!</h2>
-            <p>クイズ初心者の方も、腕に覚えのある方も大歓迎です。興味のある方は下記までご連絡ください。</p>
+            <p>興味のある方は下記までご連絡ください。</p>
             <br>
-            <a href="mailto:teqquiz@gmail.com" class="btn">
+            <a href="contact.html" class="btn">
                 お問い合わせはこちら
             </a>
         </section>
@@ -60,7 +73,7 @@
     </main>
 
     <footer style="text-align: center; padding: 20px; font-size: 0.8rem; color: #666;">
-        &copy; 2026 東京科学大クイズ研究会 TEQ
+        &copy; 2026 〇〇大学 クイズ研究会
     </footer>
 
 </body>
