@@ -184,3 +184,61 @@ th {
     margin-bottom: 1rem;
     display: inline-block;
 }
+
+/* --- ここから下が連絡先ページ用のデザイン --- */
+
+/* 連絡先全体を囲む大きなカード */
+.contact-container {
+    max-width: 600px; /* 横幅を少し狭くして中央に寄せる */
+    margin: 3rem auto; /* 上下の余白をたっぷり取る */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* ボタン同士の間隔 */
+}
+
+/* リンクボタンの共通設定 */
+.contact-link {
+    display: flex;
+    align-items: center; /* アイコンと文字を上下中央揃え */
+    padding: 1.5rem 2rem; /* 内側の余白を大きめに */
+    background-color: white;
+    border-radius: 1rem; /* 角を丸く */
+    text-decoration: none; /* 下線を消す */
+    color: #1f2937; /* 文字色（濃いグレー） */
+    border: 2px solid #e5e7eb; /* 薄い枠線 */
+    transition: all 0.3s ease; /* アニメーションの設定 */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* 影をつける */
+}
+
+/* マウスが乗ったときの動き（ホバー効果） */
+.contact-link:hover {
+    transform: translateY(-5px); /* 少し上に浮き上がる */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* 影を濃くする */
+    border-color: #1e3a8a; /* 枠線を紺色にする */
+}
+
+/* アイコン（SVG）のサイズ調整 */
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 1.5rem; /* 文字との間隔 */
+    flex-shrink: 0; /* アイコンが潰れないようにする */
+}
+
+/* X（旧Twitter）のアイコン色 */
+.icon-x { color: #000000; }
+
+/* メールのアイコン色 */
+.icon-mail { color: #1d4ed8; }
+
+/* テキスト部分のデザイン */
+.contact-text h3 {
+    margin: 0 0 0.25rem 0; /* タイトルの下の余白 */
+    font-size: 1.25rem;
+    color: #1e3a8a;
+}
+.contact-text p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6b7280; /* 薄いグレー */
+}
