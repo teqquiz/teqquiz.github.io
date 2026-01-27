@@ -185,70 +185,60 @@ th {
     display: inline-block;
 }
 
-/* --- ここから下が連絡先ページ用のデザイン（カード型・長文対応） --- */
+/* --- ここから下が連絡先ページ用のデザイン（分離型・背景色あり） --- */
 
 /* リスト全体の設定 */
 .contact-list {
-    max-width: 800px; /* 長文が入るので幅を広めに確保 */
+    max-width: 800px;
     margin: 4rem auto;
-    padding: 0 20px; /* スマホで端が切れないように余白 */
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem; /* カード同士の間隔 */
+    gap: 2rem; /* カード同士の間隔を少し広めに */
 }
 
-/* カード（リンク）個別の設定 */
+/* カード全体の設定（リンクではなく単なる箱として扱う） */
 .contact-card {
-    display: flex; /* 横並びにする */
-    align-items: flex-start; /* 上揃え（長文のときにきれい） */
-    background-color: #ffffff;
-    border: 1px solid #e5e7eb;
-    border-radius: 12px; /* 角丸を少し大きく */
-    padding: 24px; /* 内側の余白をたっぷりとる */
-    text-decoration: none;
-    color: #333;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    background-color: #e6e6fa; /* ご指定の薄い紫色 */
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* 上部：リンク部分（アイコン + ID）のデザイン */
+.card-link-header {
+    display: inline-flex; /* コンテンツの幅に合わせて伸縮 */
+    align-items: center; /* 上下中央揃え */
+    text-decoration: none; /* 下線を消す */
+    color: #1e3a8a; /* 文字色（紺色） */
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 1rem; /* 説明文との間隔 */
+    padding: 8px 12px; /* クリックしやすいように少し余白 */
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.6); /* リンク部分だけ少し白くしてボタン感を出す */
     transition: all 0.3s ease;
 }
 
-/* マウスが乗ったときの動き */
-.contact-card:hover {
-    transform: translateY(-3px); /* 軽く浮く */
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    border-color: #1e3a8a; /* 枠線を紺色に */
+/* リンクにマウスが乗ったときの動き */
+.card-link-header:hover {
+    background-color: #ffffff; /* 真っ白にする */
+    transform: translateY(-2px); /* 少し浮く */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* アイコン画像のエリア */
-.card-icon {
-    flex-shrink: 0; /* アイコンが押しつぶされないようにする */
-    margin-right: 24px; /* テキストとの間隔 */
-    padding-top: 5px; /* テキストの1行目と高さを合わせる微調整 */
-}
-
+/* アイコン画像のサイズ */
 .icon-img {
-    width: 48px; /* アイコンを少し大きく */
+    width: 40px;
     height: auto;
-    display: block;
+    margin-right: 12px;
+    vertical-align: middle;
 }
 
-/* 右側のテキストエリア（IDと説明文） */
-.card-text {
-    flex-grow: 1; /* 余ったスペースを全部使う */
-}
-
-/* ID/メールアドレス（太字部分） */
-.card-title {
-    display: block; /* 1行独占 */
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #1e3a8a;
-    margin-bottom: 0.5rem; /* 説明文との隙間 */
-}
-
-/* 説明文 */
+/* 下部：説明文（地の文）のデザイン */
 .card-desc {
-    display: block;
-    font-size: 0.95rem;
-    line-height: 1.6; /* 行間を広げて読みやすく */
-    color: #666;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.7; /* 読みやすいように行間を空ける */
+    color: #333333; /* 読みやすい濃いグレー */
 }
