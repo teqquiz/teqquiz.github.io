@@ -11,10 +11,10 @@ const menuHtml = `
             <li><a href="schedule.html">スケジュール</a></li>
             <li><a href="contact.html">連絡先</a></li>
             <li><a href="history.html">歴史</a></li>
-            </ul>
+        </ul>
     </div>
 </div>
 `;
 
-// 文書の中に、このHTMLを書き出す命令
-document.write(menuHtml);
+// bodyタグの最初（一番上）にメニューを挿入する命令
+document.body.insertAdjacentHTML('afterbegin', menuHtml);
