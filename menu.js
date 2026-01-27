@@ -10,7 +10,7 @@ const menuHtml = `
             <li><a href="join.html">入会案内</a></li>
             <li><a href="schedule.html">スケジュール</a></li>
             <li><a href="contact.html">連絡先</a></li>
-            <li><a href="contact.html">歴史</a></li>
+            <li><a href="history.html">歴史</a></li>
             </ul>
     </div>
 </div>
