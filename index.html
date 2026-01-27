@@ -4,65 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>クイズ研究会 - 公式サイト</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body { font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif; }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body>
 
-    <header class="bg-blue-900 text-white py-12 px-4 text-center">
-        <h1 class="text-4xl font-bold mb-2">東京科学大クイズ研究会 TEQ</h1>
-        <p class="text-lg opacity-90">正解への情熱、知の探究。</p>
+    <header>
+        <h1>〇〇大学 クイズ研究会</h1>
+        <p>正解への情熱、知の探究。</p>
     </header>
 
-    <main class="max-w-4xl mx-auto py-10 px-6">
+    <main>
         
-        <section class="mb-12">
-            <h2 class="text-2xl font-bold border-b-2 border-blue-900 pb-2 mb-4">About Us</h2>
-            <p class="leading-relaxed">
+        <section>
+            <h2>About Us</h2>
+            <p>
                 当サークルは、クイズを楽しむこと、そして知見を広めることを目的に活動しています。
                 文系・理系を問わず、あらゆるジャンルの知識を武器に、日々早押しボタンを叩いています。
                 現在は大学からの「公認化」を目指し、より活発な運営に取り組んでいます。
             </p>
         </section>
+        <br>
 
-        <section class="mb-12 grid md:grid-cols-2 gap-6">
-            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                <h3 class="text-xl font-bold text-blue-800 mb-3">普段の活動</h3>
-                <p>週に1回、Taki Plaza ワークショップルームにて早押し機を使った本格的な練習を行っています。</p>
+        <section>
+            <div class="card">
+                <h3>例会・練習会</h3>
+                <p>週に〇回、学内の教室にて早押し機を使った本格的な練習を行っています。</p>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                <h3 class="text-xl font-bold text-blue-800 mb-3">問題作成</h3>
+            
+            <div class="card">
+                <h3>問題作成</h3>
                 <p>オリジナルのクイズ問題を作成し、互いに出し合うことで、作問スキルの向上も図っています。</p>
             </div>
         </section>
 
-        <section class="bg-yellow-50 p-8 rounded-xl border-2 border-yellow-200 mb-12">
-            <h2 class="text-xl font-bold mb-4 text-yellow-800 underline decoration-yellow-300">今日の1問</h2>
-            <div class="text-lg mb-4">
-                <strong>Q.</strong> 横軸にP波の走時、縦軸に初期微動継続時間をプロットした図のことを、これを提唱した日本の地震学者の名前から何というでしょう？
-            </div>
-            <details class="cursor-pointer">
-                <summary class="text-blue-700 font-bold hover:text-blue-500 transition">正解を見る</summary>
-                <div class="mt-2 p-4 bg-white rounded border border-yellow-100 italic">
-                    A. 和達（わだち）ダイヤグラム
-                </div>
+        <section class="quiz-box">
+            <h2>今日の1問</h2>
+            <p>
+                <strong>Q.</strong> 地震の震源の分布を立体的に表した図のことを、これを提唱した日本の地震学者の名前から何図というでしょう？
+            </p>
+            <details>
+                <summary style="cursor: pointer; color: #1d4ed8; font-weight: bold;">正解を見る</summary>
+                <p style="margin-top: 10px;">A. 和達（わだち）図</p>
             </details>
         </section>
 
-        <section class="text-center">
-            <h2 class="text-2xl font-bold mb-4">Join Us!</h2>
-            <p class="mb-6">クイズ初心者の方も、腕に覚えのある方も大歓迎です。興味のある方は下記までご連絡ください。</p>
-            <a href="mailto:teqquiz@gmail.com" class="bg-blue-700 text-white px-8 py-3 rounded-full font-bold hover:bg-blue-800 transition shadow-lg">
+        <section style="text-align: center; margin-bottom: 50px;">
+            <h2>Join Us!</h2>
+            <p>クイズ初心者の方も、腕に覚えのある方も大歓迎です。興味のある方は下記までご連絡ください。</p>
+            <br>
+            <a href="mailto:example@example.com" class="btn">
                 お問い合わせはこちら
             </a>
         </section>
 
     </main>
 
-    <footer class="bg-gray-100 py-8 text-center text-sm text-gray-500 border-t border-gray-200">
-        &copy; 2026 東京科学大クイズ研究会
+    <footer style="text-align: center; padding: 20px; font-size: 0.8rem; color: #666;">
+        &copy; 2026 〇〇大学 クイズ研究会
     </footer>
 
 </body>
