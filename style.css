@@ -185,37 +185,70 @@ th {
     display: inline-block;
 }
 
-/* --- ここから下が連絡先ページ用のデザイン（シンプル版） --- */
+/* --- ここから下が連絡先ページ用のデザイン（カード型・長文対応） --- */
 
-/* 全体を中央に寄せる */
-.contact-simple-list {
-    max-width: 600px;
-    margin: 4rem auto; /* 上下の余白を大きく確保 */
+/* リスト全体の設定 */
+.contact-list {
+    max-width: 800px; /* 長文が入るので幅を広めに確保 */
+    margin: 4rem auto;
+    padding: 0 20px; /* スマホで端が切れないように余白 */
     display: flex;
-    flex-direction: column; /* 縦並び */
-    align-items: center; /* 中央揃え */
-    gap: 2rem; /* 各項目の間隔 */
+    flex-direction: column;
+    gap: 1.5rem; /* カード同士の間隔 */
 }
 
-/* リンクの見た目 */
-.simple-link {
-    display: flex;
-    align-items: center; /* アイコンと文字の上下位置を揃える */
-    text-decoration: none; /* 下線を消す */
-    color: #333; /* 文字色 */
-    font-size: 1.2rem; /* 文字の大きさ */
-    transition: opacity 0.3s;
+/* カード（リンク）個別の設定 */
+.contact-card {
+    display: flex; /* 横並びにする */
+    align-items: flex-start; /* 上揃え（長文のときにきれい） */
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px; /* 角丸を少し大きく */
+    padding: 24px; /* 内側の余白をたっぷりとる */
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
 }
 
-/* マウスが乗ったときに少し薄くする */
-.simple-link:hover {
-    opacity: 0.7;
+/* マウスが乗ったときの動き */
+.contact-card:hover {
+    transform: translateY(-3px); /* 軽く浮く */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-color: #1e3a8a; /* 枠線を紺色に */
 }
 
-/* アイコン画像のサイズ設定 */
+/* アイコン画像のエリア */
+.card-icon {
+    flex-shrink: 0; /* アイコンが押しつぶされないようにする */
+    margin-right: 24px; /* テキストとの間隔 */
+    padding-top: 5px; /* テキストの1行目と高さを合わせる微調整 */
+}
+
 .icon-img {
-    width: 40px; /* アイコンの幅 */
-    height: auto; /* 高さは自動調整 */
-    margin-right: 15px; /* 文字との隙間 */
-    vertical-align: middle;
+    width: 48px; /* アイコンを少し大きく */
+    height: auto;
+    display: block;
+}
+
+/* 右側のテキストエリア（IDと説明文） */
+.card-text {
+    flex-grow: 1; /* 余ったスペースを全部使う */
+}
+
+/* ID/メールアドレス（太字部分） */
+.card-title {
+    display: block; /* 1行独占 */
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1e3a8a;
+    margin-bottom: 0.5rem; /* 説明文との隙間 */
+}
+
+/* 説明文 */
+.card-desc {
+    display: block;
+    font-size: 0.95rem;
+    line-height: 1.6; /* 行間を広げて読みやすく */
+    color: #666;
 }
