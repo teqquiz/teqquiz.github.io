@@ -249,5 +249,6 @@ th {
     font-size: 1.5rem;    /* 文字サイズ（1.5倍） */
     font-weight: bold;    /* 太文字 */
     text-align: center;   /* 中央寄せ */
-    margin: 2rem 0;       /* 上下の余白も少し空ける */
+    margin: 10px 0;      /* 上下の余白を小さくする（以前は 2rem でした） */
+    line-height: 1.2;    /* 行間も少し詰め気味にする */
 }
