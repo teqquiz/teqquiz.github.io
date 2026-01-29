@@ -242,3 +242,12 @@ th {
     line-height: 1.7; /* 読みやすいように行間を空ける */
     color: #333333; /* 読みやすい濃いグレー */
 }
+
+/* 赤くて太い注目テキスト */
+.attention-text {
+    color: #C22047;       /* 指定の色 */
+    font-size: 1.5rem;    /* 文字サイズ（1.5倍） */
+    font-weight: bold;    /* 太文字 */
+    text-align: center;   /* 中央寄せ */
+    margin: 2rem 0;       /* 上下の余白も少し空ける */
+}
