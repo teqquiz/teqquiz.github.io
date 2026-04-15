@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ブログ - TEQ 東京科学大学クイズ研究会</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .blog-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .blog-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: box-shadow 0.2s ease;
+        }
+
+        .blog-card:hover {
+            box-shadow: 0 4px 12px rgba(28, 49, 119, 0.15);
+        }
+
+        .blog-card-meta {
+            font-size: 0.85rem;
+            color: #7F96C2;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-card-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #1C3177;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-card-excerpt {
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .blog-empty {
+            text-align: center;
+            padding: 4rem 1rem;
+            color: #999;
+        }
+
+        .blog-empty p {
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>ブログ</h1>
+        <p>活動の記録・レポート</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>活動レポート</h2>
+
+            <div class="blog-list" id="blog-list">
+                <!-- 記事はここに追加していく -->
+                <!-- 例：
+                <div class="blog-card">
+                    <div class="blog-card-meta">2026年04月01日 ／ 大会レポート</div>
+                    <div class="blog-card-title">abc the XX に参加しました</div>
+                    <div class="blog-card-excerpt">
+                        〇〇大学で開催されたabc the XXに参加しました。今年は〇名で出場し、...
+                    </div>
+                </div>
+                -->
+            </div>
+
+            <div class="blog-empty" id="blog-empty">
+                <strong>記事はまだありません</strong>
+                <p>今後の活動レポートをお楽しみに。</p>
+            </div>
+        </section>
+
+        <section style="text-align: center; margin-top: 3rem; margin-bottom: 50px;">
+            <a href="index.html" class="btn">ホームに戻る</a>
+        </section>
+    </main>
+
+    <script>
+        // 記事が追加されたら「まだありません」の表示を消す
+        const list = document.getElementById('blog-list');
+        const empty = document.getElementById('blog-empty');
+        if (list.children.length > 0) {
+            empty.style.display = 'none';
+        }
+    </script>
+    <script src="menu.js"></script>
+    <script src="footer.js"></script>
+
+</body>
+</html>

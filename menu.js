@@ -9,6 +9,7 @@ const menuHtml = `
             <li><a href="index.html">ホーム</a></li>
             <li><a href="join.html">入会案内</a></li>
             <li><a href="schedule.html">スケジュール</a></li>
+            <li><a href="blog.html">ブログ</a></li>
             <li><a href="contact.html">連絡先</a></li>
             <li><a href="history.html">歴史</a></li>
         </ul>
@@ -16,5 +17,4 @@ const menuHtml = `
 </div>
 `;
 
-// bodyタグの最初（一番上）にメニューを挿入する命令
 document.body.insertAdjacentHTML('afterbegin', menuHtml);

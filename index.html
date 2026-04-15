@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>クイズ研究会 - 公式サイト</title>
+    <title>TEQ - 東京科学大学クイズ研究会</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
     <header>
-        <h1>〇〇大学 クイズ研究会</h1>
+        <h1>東京科学大学クイズ研究会</h1>
         <p>正解への情熱、知の探究。</p>
     </header>
 
@@ -17,49 +17,55 @@
         <section>
             <h2>About Us</h2>
             <p>
-                当サークルは、クイズを楽しむこと、そして知見を広めることを目的に活動しています。
-                文系・理系を問わず、あらゆるジャンルの知識を武器に、日々早押しボタンを叩いています。
-                現在は大学からの「公認化」を目指し、より活発な運営に取り組んでいます。
+                TEQ（てっく）は、東京科学大学を拠点とするインカレのクイズサークルです。
+                毎週水曜日を中心に週1〜2回、大岡山キャンパスで早押しクイズの練習を行っています。
+                文系・理系、学年、大学を問わず、クイズ未経験でも大歓迎です！
             </p>
         </section>
         <br>
 
         <section>
             <div class="card">
-                <h3>例会・練習会</h3>
-                <p>週に〇回、学内の教室にて早押し機を使った本格的な練習を行っています。</p>
+                <h3>早押しクイズ</h3>
+                <p>早押し機を使った本格的な練習を週1〜2回実施しています。初心者から経験者まで一緒に楽しめます。</p>
             </div>
-            
+
             <div class="card">
-                <h3>問題作成</h3>
-                <p>オリジナルのクイズ問題を作成し、互いに出し合うことで、作問スキルの向上も図っています。</p>
+                <h3>大会参加</h3>
+                <p>AQL（団体戦）やabc・EQIDENなど、学生向けクイズ大会に積極的に参加しています。</p>
+            </div>
+
+            <div class="card">
+                <h3>工大祭</h3>
+                <p>毎年10月の工大祭で早押しクイズ体験会を出店しています。一般の方も大歓迎です。</p>
             </div>
         </section>
 
         <section class="quiz-box">
             <h2>今日の1問</h2>
-            <p>
-                <strong>Q.</strong> 地震の震源の分布を立体的に表した図のことを、これを提唱した日本の地震学者の名前から何図というでしょう？
-            </p>
-            <details>
-                <summary style="cursor: pointer; color: #1d4ed8; font-weight: bold;">正解を見る</summary>
-                <p style="margin-top: 10px;">A. 和達（わだち）図</p>
-            </details>
+            <div id="quiz-content">
+                <p id="quiz-question"><strong>Q.</strong> <span id="question-text">読み込み中...</span></p>
+                <details>
+                    <summary style="cursor: pointer; color: #1C3177; font-weight: bold;">正解を見る</summary>
+                    <p id="answer-text" style="margin-top: 10px;"></p>
+                </details>
+            </div>
         </section>
 
         <section style="text-align: center; margin-bottom: 50px;">
             <h2>Join Us!</h2>
-            <p>興味のある方は下記までご連絡ください。</p>
+            <p>クイズに少しでも興味があれば、まずは体験にいらしてください。</p>
             <br>
-            <a href="contact.html" class="btn">
-                お問い合わせはこちら
+            <a href="join.html" class="btn">
+                入会案内を見る
             </a>
         </section>
 
     </main>
 
+    <script src="quiz.js"></script>
     <script src="menu.js"></script>
     <script src="footer.js"></script>
-    
+
 </body>
 </html>

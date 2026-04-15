@@ -1,5 +1,10 @@
 /* クイズ研究会サイト用 スタイルシート */
 
+:root {
+    --color-main: #1C3177;
+    --color-sub: #7F96C2;
+}
+
 body {
     font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
     background-color: #f9fafb;
@@ -9,7 +14,7 @@ body {
 }
 
 header {
-    background-color: #1e3a8a; /* 濃い青 */
+    background-color: #1C3177; /* メインカラー */
     color: white;
     padding: 3rem 1rem;
     text-align: center;
@@ -23,7 +28,7 @@ main {
 
 h2 {
     font-size: 1.5rem;
-    border-bottom: 2px solid #1e3a8a;
+    border-bottom: 2px solid #1C3177;
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
 }
@@ -46,7 +51,7 @@ h2 {
 
 .btn {
     display: inline-block;
-    background-color: #1d4ed8;
+    background-color: #1C3177;
     color: white;
     padding: 0.75rem 2rem;
     border-radius: 9999px;
@@ -56,7 +61,7 @@ h2 {
 }
 
 .btn:hover {
-    background-color: #1e40af;
+    background-color: #7F96C2;
 }
 
 /* --- ここから下がハンバーガーメニューの追加設定 --- */
@@ -86,7 +91,7 @@ h2 {
     height: 3px;
     width: 25px;
     border-radius: 3px;
-    background-color: #1e3a8a; /* 線の色（紺色） */
+    background-color: #1C3177; /* 線の色 */
     position: absolute;
     transition: all 0.3s; /* アニメーションの速度 */
 }
@@ -119,7 +124,7 @@ h2 {
     top: 0;
     left: -100%; /* 画面の左外に隠す */
     z-index: 9998; /* ボタンのすぐ後ろ */
-    background-color: rgba(30, 58, 138, 0.95); /* 背景色（紺色） */
+    background-color: rgba(28, 49, 119, 0.95); /* 背景色 */
     transition: all 0.5s;
 }
 
@@ -165,7 +170,7 @@ th, td {
 /* 見出し（月・予定）の列 */
 th {
     background-color: #f3f4f6; /* 薄いグレー */
-    color: #1e3a8a; /* 紺色 */
+    color: #1C3177;
     font-weight: bold;
     width: 30%; /* 「月」の列の幅 */
 }
@@ -179,7 +184,7 @@ th {
 .card-title {
     font-size: 1.4rem;
     font-weight: bold;
-    color: #1e3a8a;
+    color: #1C3177;
     border-bottom: 2px solid #1e3a8a;
     margin-bottom: 1rem;
     display: inline-block;
@@ -210,7 +215,7 @@ th {
     display: inline-flex; /* コンテンツの幅に合わせて伸縮 */
     align-items: center; /* 上下中央揃え */
     text-decoration: none; /* 下線を消す */
-    color: #1e3a8a; /* 文字色（紺色） */
+    color: #1C3177; /* 文字色（紺色） */
     font-weight: bold;
     font-size: 1.3rem;
     margin-bottom: 1rem; /* 説明文との間隔 */
