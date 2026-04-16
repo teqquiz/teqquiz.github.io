@@ -1,7 +1,7 @@
 // quiz.js
 // questions.json から今日の日付に対応する問題を1問表示する
 
-fetch('questions.json')
+fetch('data/questions.json')
     .then(res => res.json())
     .then(questions => {
         if (!questions || questions.length === 0) return;

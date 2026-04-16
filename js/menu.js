@@ -8,7 +8,7 @@ const menuHtml = `
         <ul>
             <li><a href="index.html">ホーム</a></li>
             <li><a href="join.html">入会案内</a></li>
-            <li><a href="schedule.html">スケジュール</a></li>
+            <li><a href="schedule.html">活動紹介</a></li>
             <li><a href="blog.html">ブログ</a></li>
             <li><a href="booth.html">問題集</a></li>
             <li><a href="contact.html">連絡先</a></li>

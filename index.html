@@ -4,8 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TEQ - 東京科学大学クイズ研究会</title>
-    <link rel="icon" href="teq3-01.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/TEQLogo.jpg">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .nav-card {
+            display: block;
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            text-decoration: none;
+            color: inherit;
+            transition: box-shadow 0.2s ease, transform 0.2s ease;
+        }
+
+        .nav-card:hover {
+            box-shadow: 0 4px 12px rgba(28, 49, 119, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .nav-card-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #1C3177;
+            margin-bottom: 0.5rem;
+        }
+
+        .nav-card-desc {
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.6;
+        }
+    </style>
 </head>
 <body>
 
@@ -16,57 +53,48 @@
 
     <main>
         <section>
-            <h2>About Us</h2>
-            <p>
-                TEQ（てっく）は、東京科学大学を拠点とするインカレのクイズサークルです。
-                毎週水曜日を中心に週1〜2回、大岡山キャンパスで早押しクイズの練習を行っています。
-                文系・理系、学年、大学を問わず、クイズ未経験でも大歓迎です！
-            </p>
-        </section>
-        <br>
-
-        <section>
-            <div class="card">
-                <h3>早押しクイズ</h3>
-                <p>早押し機を使った本格的な練習を週1〜2回実施しています。初心者から経験者まで一緒に楽しめます。</p>
-            </div>
-
-            <div class="card">
-                <h3>大会参加</h3>
-                <p>AQL（団体戦）やabc・EQIDENなど、学生向けクイズ大会に積極的に参加しています。</p>
-            </div>
-
-            <div class="card">
-                <h3>工大祭</h3>
-                <p>毎年10月の工大祭で早押しクイズ体験会を出店しています。一般の方も大歓迎です。</p>
+            <h2>メニュー</h2>
+            <div class="nav-grid">
+                <a href="join.html" class="nav-card">
+                    <div class="nav-card-title">入会案内</div>
+                    <div class="nav-card-desc">活動への参加方法や、入会条件・年会費についてご案内します。</div>
+                </a>
+                <a href="schedule.html" class="nav-card">
+                    <div class="nav-card-title">活動紹介</div>
+                    <div class="nav-card-desc">活動内容・場所・年間スケジュールをまとめています。</div>
+                </a>
+                <a href="blog.html" class="nav-card">
+                    <div class="nav-card-title">ブログ</div>
+                    <div class="nav-card-desc">大会レポートや練習の様子など、活動の記録を掲載しています。</div>
+                </a>
+                <a href="booth.html" class="nav-card">
+                    <div class="nav-card-title">問題集</div>
+                    <div class="nav-card-desc">TEQが制作した問題集をBoothにて販売しています。</div>
+                </a>
+                <a href="contact.html" class="nav-card">
+                    <div class="nav-card-title">連絡先</div>
+                    <div class="nav-card-desc">XアカウントやメールアドレスなどのSNS・連絡先はこちら。</div>
+                </a>
+                <a href="history.html" class="nav-card">
+                    <div class="nav-card-title">TEQの歴史</div>
+                    <div class="nav-card-desc">サークルの成り立ちや「TEQ」という名前の由来について。</div>
+                </a>
             </div>
         </section>
 
         <section class="quiz-box">
             <h2>今日の1問</h2>
-            <div id="quiz-content">
-                <p id="quiz-question"><strong>Q.</strong> <span id="question-text">読み込み中...</span></p>
-                <details>
-                    <summary style="cursor: pointer; color: #1C3177; font-weight: bold;">正解を見る</summary>
-                    <p id="answer-text" style="margin-top: 10px;"></p>
-                </details>
-            </div>
+            <p id="quiz-question"><strong>Q.</strong> <span id="question-text">読み込み中...</span></p>
+            <details>
+                <summary style="cursor: pointer; color: #1C3177; font-weight: bold;">正解を見る</summary>
+                <p id="answer-text" style="margin-top: 10px;"></p>
+            </details>
         </section>
-
-        <section style="text-align: center; margin-bottom: 50px;">
-            <h2>Join Us!</h2>
-            <p>クイズに少しでも興味があれば、まずは体験にいらしてください。</p>
-            <br>
-            <a href="join.html" class="btn">
-                入会案内を見る
-            </a>
-        </section>
-
     </main>
 
-    <script src="quiz.js"></script>
-    <script src="menu.js"></script>
-    <script src="footer.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/footer.js"></script>
 
 </body>
 </html>
