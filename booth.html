@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>問題集のご紹介 - 東京科学大学クイズ研究会</title>
+    <link rel="icon" href="teq3-01.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 商品ヘッダー */
+        .product-hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (min-width: 640px) {
+            .product-hero {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+        }
+
+        .product-cover {
+            width: 200px;
+            flex-shrink: 0;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+            /* 画像がない場合のプレースホルダー */
+            background-color: #e5e7eb;
+            aspect-ratio: 3/4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #aaa;
+            font-size: 0.85rem;
+        }
+
+        .product-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0.5rem;
+        }
+
+        .product-info {
+            flex: 1;
+        }
+
+        .product-title {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #1C3177;
+            line-height: 1.4;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-subtitle {
+            font-size: 1rem;
+            color: #7F96C2;
+            margin-bottom: 1rem;
+        }
+
+        .product-catch {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-price {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #1C3177;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-price span {
+            font-size: 0.9rem;
+            font-weight: normal;
+            color: #666;
+            margin-left: 0.5rem;
+        }
+
+        /* 収録内容リスト */
+        .spec-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .spec-list li {
+            padding: 0.6rem 0;
+            border-bottom: 1px solid #e5e7eb;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .spec-list li:last-child {
+            border-bottom: none;
+        }
+
+        .spec-label {
+            color: #7F96C2;
+            font-weight: bold;
+            min-width: 10em;
+            flex-shrink: 0;
+        }
+
+        /* サンプル問題 */
+        .sample-question {
+            background-color: #fefce8;
+            border: 2px solid #fef08a;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .sample-question p {
+            margin: 0 0 0.75rem;
+        }
+
+        /* 購入ボタン */
+        .booth-btn {
+            display: inline-block;
+            background-color: #F4526B; /* Boothのブランドカラー */
+            color: white;
+            padding: 0.9rem 2.5rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            transition: background-color 0.2s;
+        }
+
+        .booth-btn:hover {
+            background-color: #d9344c;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>問題集</h1>
+        <p>TEQ 東京科学大学クイズ研究会</p>
+    </header>
+
+    <main>
+
+        <!-- 商品ヘッダー -->
+        <section class="product-hero">
+            <div class="product-cover">
+                <img src="QuickTEQ.png" alt="QuickTEQ表紙">
+            </div>
+
+            <div class="product-info">
+                <div class="product-title">第1回QuickTEQ記録集</div>
+                <p class="product-catch">
+                    持ち寄り企画「QuickTEQ」の記録集です。<br>
+                </p>
+                <div class="product-price">
+                    ¥500<span>（税込・PDFのみ）</span>
+                </div>
+                <div class="product-price">
+                    ¥600<span>（税込・PDF+Excel）</span>
+                </div>
+                <a href="https://teq.booth.pm/items/7528216" target="_blank" class="booth-btn">
+                    Boothで購入する
+                </a>
+            </div>
+        </section>
+
+        <!-- 収録内容 -->
+        <section>
+            <h2>収録内容</h2>
+            <div class="card">
+                <ul class="spec-list">
+                    <li>
+                        <span class="spec-label">概要</span>
+                        <span>
+                            2025年9月15日に東京科学大学クイズ研究会で行われた企画「QuickTEQ」の記録集です。<br>
+                            当日の使用問題と正誤記録、部員によるコラムが収録されています。
+                        </span>
+                    </li>
+                    <li>
+                        <span class="spec-label">問題数</span>
+                        <span>700問</span>
+                    </li>
+                    <li>
+                        <span class="spec-label">ジャンル</span>
+                        <span>各部員の手癖が詰まったノンジャンル</span>
+                    </li>
+                    <li>
+                        <span class="spec-label">こんな方におすすめ</span>
+                        <span>
+                            個性豊かな問題で早押しをしたい方<br>
+                            TEQの部員がどんな問題を作るのか気になる方
+                        </span>
+                    </li>
+                    <li>
+                        <span class="spec-label">ページ数</span>
+                        <span>77ページ</span>
+                    </li>
+                    <li>
+                        <span class="spec-label">発行</span>
+                        <span>東京科学大学クイズ研究会 TEQ</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- サンプル問題 -->
+        <section>
+            <h2>サンプル問題</h2>
+            <div style="display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap;">
+                <img src="QuickTEQ_example.jpg" alt="サンプル問題" style="width: 48%; min-width: 260px; border-radius: 0.5rem;">
+                <div style="flex: 1; min-width: 200px;">
+                    <p>
+                        サンプルとして、各部員の1問目の問題を掲載いたします。<br>
+                        書式・難易度感の参考にしてください。
+                    </p>
+                    <h3>【注意】</h3>
+                    <ul>
+                        <li>持ち寄り企画のため、問題の被りがございます。</li>
+                        <li>作問者によって傾向が大きく異なります。サンプル問題をご確認の上ご購入ください。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 購入CTA -->
+        <section style="text-align: center; margin: 3rem 0 50px;">
+            <h2>購入はこちら</h2>
+            <p style="margin-bottom: 1.5rem;">BOOTHにて販売中です。</p>
+            <a href="https://teq.booth.pm/items/7528216" target="_blank" class="booth-btn">
+                Boothで購入する
+            </a>
+        </section>
+
+    </main>
+
+    <script src="menu.js"></script>
+    <script src="footer.js"></script>
+
+</body>
+</html>
