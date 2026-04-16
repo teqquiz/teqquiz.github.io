@@ -108,6 +108,17 @@
             flex-shrink: 0;
         }
 
+        /* スマホ：ラベルと内容を縦並びに */
+        @media (max-width: 640px) {
+            .spec-list li {
+                flex-direction: column;
+                gap: 0.25rem;
+            }
+            .spec-label {
+                min-width: 0;
+            }
+        }
+
         /* サンプル問題 */
         .sample-question {
             background-color: #fefce8;

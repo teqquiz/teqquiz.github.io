@@ -118,7 +118,8 @@ h2 {
 
 /* メニューの中身（最初は隠しておく） */
 .menu-content {
-    width: 100%;
+    width: 80%;
+    max-width: 320px;
     height: 100%;
     position: fixed;
     top: 0;
