@@ -249,6 +249,15 @@ th {
     color: #333333; /* 読みやすい濃いグレー */
 }
 
+/* トップページ・メニュー上の導入文 */
+.intro-lead {
+    text-align: center;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: #333333;
+    margin: 0 0 2.5rem;
+}
+
 /* --- ここから下がお問い合わせフォーム用のデザイン --- */
 
 .contact-form-section {
