@@ -51,6 +51,59 @@
 
         </div>
 
+        <section class="contact-form-section">
+            <h2 class="form-title">お問い合わせフォーム</h2>
+            <p class="form-lead">
+                下記フォームからもお問い合わせいただけます。返信のため、メールアドレスは必ずご入力ください。
+            </p>
+
+            <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+                <!-- ▼▼▼ 要設定 ▼▼▼ -->
+                <!-- https://web3forms.com/ でメールアドレスを登録し、届いた Access Key を下記に貼り付けてください -->
+                <input type="hidden" name="access_key" value="22e0cb98-8eb0-4aaa-bfc4-330ba6e98cce">
+                <!-- ▲▲▲ 要設定 ▲▲▲ -->
+
+                <input type="hidden" name="subject" value="【TEQサイト】お問い合わせフォームからの連絡">
+                <input type="hidden" name="from_name" value="TEQ お問い合わせフォーム">
+
+                <!-- スパム対策（人間には見えない項目。ボットが入力すると送信がブロックされます） -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display:none;" tabindex="-1" autocomplete="off">
+
+                <div class="form-group">
+                    <label for="name">お名前 <span class="required">必須</span></label>
+                    <input type="text" id="name" name="name" required placeholder="例）東科 太郎">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">メールアドレス <span class="required">必須</span></label>
+                    <input type="email" id="email" name="email" required placeholder="例）example@example.com">
+                    <p class="form-note">こちらのアドレスに返信いたします。お間違いのないようご確認ください。</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">お問い合わせ種別</label>
+                    <select id="category" name="種別">
+                        <option value="交流戦・対戦のご依頼">交流戦・対戦のご依頼</option>
+                        <option value="企業様からのお問い合わせ">企業様からのお問い合わせ</option>
+                        <option value="入会・見学について">入会・見学について</option>
+                        <option value="その他">その他</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">お問い合わせ内容 <span class="required">必須</span></label>
+                    <textarea id="message" name="message" rows="6" required placeholder="お問い合わせ内容をご記入ください。"></textarea>
+                </div>
+
+                <div class="form-submit">
+                    <button type="submit" class="btn">送信する</button>
+                </div>
+
+                <p id="form-result" class="form-result" role="status"></p>
+            </form>
+        </section>
+
         <section style="text-align: center; margin-top: 60px; margin-bottom: 50px;">
             <a href="index.html" class="btn">ホームに戻る</a>
         </section>
@@ -59,6 +112,7 @@
 
     <script src="js/menu.js"></script>
     <script src="js/footer.js"></script>
+    <script src="js/contact-form.js"></script>
 
 </body>
 </html>
