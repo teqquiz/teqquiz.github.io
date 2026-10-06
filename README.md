@@ -17,6 +17,7 @@
 | `booth.html` | 問題集の販促ページ |
 | `contact.html` | 連絡先（X・メール）・お問い合わせフォーム |
 | `history.html` | TEQの歴史・由来 |
+| `paperquiz2026.html` | 工大祭2026 ペーパークイズの解答・点数コメント・早押しクイズ体験会の感想フォーム |
 
 ## ディレクトリ構成
 
@@ -29,8 +30,10 @@
 │   ├── menu.js       # ハンバーガーメニュー（全ページ共通）
 │   ├── footer.js     # フッター（全ページ共通）
 │   ├── quiz.js       # 今日の1問ロジック
-│   └── contact-form.js # お問い合わせフォームの送信処理
+│   ├── contact-form.js # お問い合わせフォームの送信処理
+│   └── paperquiz.js  # ペーパークイズ解答ページ（点数コメント・感想フォーム）
 ├── img/              # 画像素材
+├── paperquiz/        # ペーパークイズの解答PDFと、ページ表示用のPNG
 └── data/
     └── questions.json  # 今日の1問 問題データ
 ```
@@ -69,6 +72,7 @@
 - **ログイン**：Web3Forms のサイトから **Google アカウント（teqquiz@gmail.com）でログイン**する
 - 送信された内容は **teqquiz@gmail.com** に届き、そのまま返信できる（フォームには送信者のメールアドレスが必須項目として含まれる）
 - 送信先の切り替えやスパム設定などは Web3Forms の管理画面から変更できる
+- `paperquiz2026.html` の感想フォームも同じキーを使っており、件名「【工大祭2026】早押しクイズ体験会の感想」で届く
 - `contact.html` 内の `access_key`（`name="access_key"` の hidden input）が Web3Forms と紐づくキー。フォームを作り直した場合はこの値を差し替える
 
 ## 技術スタック

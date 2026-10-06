@@ -28,4 +28,8 @@
     <loc>https://teqquiz.github.io/history.html</loc>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://teqquiz.github.io/paperquiz2026.html</loc>
+    <priority>0.7</priority>
+  </url>
 </urlset>

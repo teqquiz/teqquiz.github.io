@@ -13,6 +13,7 @@ const menuHtml = `
             <li><a href="booth.html">問題集</a></li>
             <li><a href="contact.html">連絡先</a></li>
             <li><a href="history.html">歴史</a></li>
+            <li><a href="paperquiz2026.html">工大祭2026 ペーパークイズ解答</a></li>
         </ul>
     </div>
 </div>

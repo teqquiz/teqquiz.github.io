@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工大祭2026 ペーパークイズ 解答 - TEQ 東京科学大学クイズ研究会</title>
+    <meta name="description" content="工大祭2026で東京科学大学クイズ研究会 TEQ が配布したペーパークイズの解答ページです。点数を入力するとコメントが表示されます。早押しクイズ体験会の感想もお寄せください。">
+    <meta property="og:title" content="工大祭2026 ペーパークイズ 解答 - TEQ 東京科学大学クイズ研究会">
+    <meta property="og:description" content="工大祭2026 ペーパークイズ（全17問）の解答を公開しています。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://teqquiz.github.io/paperquiz2026.html">
+    <meta property="og:image" content="https://teqquiz.github.io/img/TEQLogo.jpg">
+    <link rel="icon" href="img/TEQLogo.jpg">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* 解答（PDFを画像で表示） */
+        .answer-sheet img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .answer-pdf-link {
+            text-align: center;
+            margin: 1rem 0 3rem;
+        }
+
+        .answer-pdf-link a {
+            color: #1C3177;
+            font-weight: bold;
+        }
+
+        /* 点数判定 */
+        .score-box {
+            background-color: #fefce8;
+            border: 2px solid #fef08a;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .score-input-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+        }
+
+        .score-input-row input {
+            width: 5rem;
+            padding: 0.6rem;
+            font-size: 1.3rem;
+            font-family: inherit;
+            text-align: center;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+        }
+
+        .score-input-row input:focus {
+            outline: none;
+            border-color: #1C3177;
+            box-shadow: 0 0 0 3px rgba(28, 49, 119, 0.15);
+        }
+
+        .score-input-row .unit {
+            font-size: 1.1rem;
+        }
+
+        .score-input-row .btn {
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-family: inherit;
+            margin-left: 0.5rem;
+        }
+
+        .score-result {
+            background: white;
+            border-radius: 0.5rem;
+            padding: 1.25rem;
+            margin-top: 1rem;
+        }
+
+        .score-result[hidden] {
+            display: none;
+        }
+
+        .score-rank {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #1C3177;
+            margin: 0 0 0.5rem;
+        }
+
+        .score-comment {
+            margin: 0;
+            line-height: 1.8;
+        }
+
+        .score-error {
+            color: #C22047;
+            font-weight: bold;
+            margin: 0.5rem 0 0;
+        }
+
+        .score-error:empty {
+            display: none;
+        }
+
+        .feedback-form {
+            background-color: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .optional {
+            display: inline-block;
+            background-color: #9ca3af;
+            color: #ffffff;
+            font-size: 0.75rem;
+            font-weight: bold;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-left: 6px;
+            vertical-align: middle;
+        }
+
+        @media (max-width: 640px) {
+            .feedback-form {
+                padding: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>工大祭2026 ペーパークイズ</h1>
+        <p>解答編</p>
+    </header>
+
+    <main>
+
+        <p class="intro-lead">
+            工大祭2026にて TEQ のペーパークイズにご参加いただき、ありがとうございました！<br>
+            全17問の解答を公開します。答え合わせをしたら、ぜひ下で点数を入力してみてください。
+        </p>
+
+        <section>
+            <h2>解答</h2>
+            <a href="paperquiz/2026_answer.pdf" target="_blank" class="answer-sheet">
+                <img src="paperquiz/2026_answer.png" alt="工大祭2026 ペーパークイズ 解答編（全17問）" width="1785" height="2525">
+            </a>
+            <p class="answer-pdf-link">
+                <a href="paperquiz/2026_answer.pdf" target="_blank">PDFで開く</a>（画像をタップしても開けます）
+            </p>
+        </section>
+
+        <section>
+            <h2>点数チェック</h2>
+
+            <div class="score-box">
+                <p style="margin: 0;"><strong>何問正解できましたか？</strong>（17問中）</p>
+                <form id="score-form" class="score-input-row">
+                    <input type="number" id="score-input" min="0" max="17" step="1" inputmode="numeric" placeholder="0" aria-label="正解数">
+                    <span class="unit">/ 17 問</span>
+                    <button type="submit" class="btn">判定する</button>
+                </form>
+                <p id="score-error" class="score-error" role="alert"></p>
+                <div id="score-result" class="score-result" hidden>
+                    <p id="score-rank" class="score-rank"></p>
+                    <p id="score-comment" class="score-comment"></p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>企画の感想</h2>
+            <p class="form-lead">
+                ペーパークイズだけでなく、<strong>早押しクイズ体験会</strong>の企画全体について、よろしければ感想をお聞かせください！<br>
+                いただいた声は今後の企画づくりの参考にさせていただきます。<br>
+                （点数は上で判定すると自動で入ります）
+            </p>
+
+            <form id="feedback-form" class="feedback-form" action="https://api.web3forms.com/submit" method="POST">
+
+                <!-- お問い合わせフォーム（contact.html）と同じ Web3Forms のキー。届き先は teqquiz@gmail.com -->
+                <input type="hidden" name="access_key" value="22e0cb98-8eb0-4aaa-bfc4-330ba6e98cce">
+                <input type="hidden" name="subject" value="【工大祭2026】早押しクイズ体験会の感想">
+                <input type="hidden" name="from_name" value="TEQ 早押しクイズ体験会 感想フォーム">
+
+                <!-- スパム対策（人間には見えない項目。ボットが入力すると送信がブロックされます） -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display:none;" tabindex="-1" autocomplete="off">
+
+                <div class="form-group">
+                    <label for="fb-score">点数 <span class="optional">任意</span></label>
+                    <select id="fb-score" name="点数">
+                        <option value="未回答">選択しない</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="fb-name">ニックネーム <span class="optional">任意</span></label>
+                    <input type="text" id="fb-name" name="ニックネーム" placeholder="例）大岡山のクイズ好き">
+                </div>
+
+                <div class="form-group">
+                    <label for="fb-message">感想 <span class="required">必須</span></label>
+                    <textarea id="fb-message" name="感想" rows="5" required placeholder="早押し体験の楽しさ、ペーパークイズの難しさ、スタッフの対応など、なんでもどうぞ！"></textarea>
+                </div>
+
+                <div class="form-submit">
+                    <button type="submit" class="btn">感想を送る</button>
+                </div>
+
+                <p id="feedback-result" class="form-result" role="status"></p>
+            </form>
+        </section>
+
+        <section style="text-align: center; margin-top: 60px; margin-bottom: 50px;">
+            <p>クイズに興味を持った方は、ぜひ TEQ の活動ものぞいてみてください！</p>
+            <a href="index.html" class="btn">TEQ のホームへ</a>
+        </section>
+
+    </main>
+
+    <script src="js/menu.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/paperquiz.js"></script>
+
+</body>
+</html>
