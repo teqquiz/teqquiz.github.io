@@ -35,6 +35,11 @@
             font-weight: bold;
         }
 
+        /* タイトルを語の途中で折り返さない（狭い画面では「工大祭2026」「ペーパークイズ」で2行に） */
+        .nobreak {
+            display: inline-block;
+        }
+
         /* 点数判定 */
         .score-box {
             background-color: #fefce8;
@@ -145,7 +150,7 @@
 <body>
 
     <header>
-        <h1>工大祭2026 ペーパークイズ</h1>
+        <h1><span class="nobreak">工大祭2026</span> <span class="nobreak">ペーパークイズ</span></h1>
         <p>解答編</p>
     </header>
 
